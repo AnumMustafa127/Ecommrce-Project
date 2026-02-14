@@ -24,9 +24,10 @@ import pic8 from '../assets/8.jpg'
 import pic9 from '../assets/9.jpg'
 import pic10 from '../assets/10.jpg'
 import leftside from '../assets/left-side.png'
-
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const Main = () => {
+    const navigate = useNavigate()
     return (
         <main className=''>
             <section id='1' className='flex md:flex-row flex-col m-4 border-[#DEE2E7] bg-[#e8e6e6]  justify-evenly rounded-lg'>
@@ -34,9 +35,9 @@ const Main = () => {
                 <div className='flex flex-wrap  border  p-4 font-serif min-w-fit'>
                     <ul className="flex underline md:no-underline flex-row md:flex-col flex-wrap gap-3 md:gap-1.5">
                         <li>All Category</li>
-                        <li>Cloth & wear</li>
+                        <li className='cursor-pointer' onClick={()=>{navigate('/Second')}}>Cloth & wear</li>
                         <li>Home interior</li>
-                        <li>Computer and Tech</li>
+                        <li className='cursor-pointer' onClick={()=>{navigate('Third')}}>Computer and Tech</li>
                         <li>Tools, equipments</li>
                         <li>Automobile</li>
                         <li>Sports and outdoor</li>

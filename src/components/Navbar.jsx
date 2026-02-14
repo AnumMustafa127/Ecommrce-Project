@@ -1,11 +1,13 @@
 import React from 'react'
 import menu from '../assets/menu.png'
+import { Navigate, useNavigate  } from 'react-router-dom'
 const Navbar = () => {
+  const navigate = useNavigate()
   return (
  <nav className='flex flex-wrap border border-grey md:justify-between min-w-full'>
   <ul className='flex flex-wrap items-center'>
     <li><img src={menu} alt="" className='h-5 ' /></li>
-    <li className='rounded-xl p-2'>All Category</li>
+    <li onClick={()=>{navigate(-1)}} className='rounded-xl p-2 cursor-pointer'>All Category</li>
     <li className='rounded-xl p-2'>Hot Offers</li>
     <li className='rounded-xl p-2'>Gift boxes</li>
     <li className='rounded-xl p-2'>Projects</li>

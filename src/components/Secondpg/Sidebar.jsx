@@ -5,7 +5,7 @@ import rating3 from '../../assets/rating3.png'
 import rating5 from '../../assets/rating5.png'
 const Sidebar = () => {
     return (
-        <nav className='md:flex md:flex-col md:gap-9 max-w-52 p-4 border bg-gray-100 hidden '>
+        <nav className='md:flex md:flex-col md:gap-9 w-3/6 p-4 border bg-gray-100 hidden '>
 
             <div className='flex flex-col gap-5 max-w-fit '>
                 <h1 className='font-bold'>category</h1>
