@@ -8,7 +8,7 @@ import Fourth from './pages/Fourth'
 import Fifth from './pages/Fifth'
 function App() {
   return (
-        <Router>
+        <Router basename="/Ecommrce-Project/">
           <Routes>
             <Route path='/' element = {<First/>}/>
             <Route path='/Second' element = {<Second/>}/>
