@@ -4,8 +4,10 @@ import comment from '../assets/comment.png'
 import heart from '../assets/heart.png'
 import shoppingcart from '../assets/shoppingcart.png'
 import user from '../assets/user.png'
+import { useNavigate } from 'react-router-dom'
 import "./Header.css";
 const Header = () => {
+    const navigate = useNavigate()
     return (
         <header className='flex md:flex-row flex-col gap-2 justify-between items-center'>
             <div className="flex flex-col ">
@@ -44,8 +46,8 @@ const Header = () => {
                     <h1>Order</h1>
                 </div>
                 <div className='flex flex-col items-center'>
-                    <img className='item' src={shoppingcart} alt="" />
-                    <h1>My Cart</h1>
+                    <img className='item cursor-pointer' onClick={()=>{navigate('/Fifth')}} src={shoppingcart} alt="" />
+                    <h1 >My Cart</h1>
                 </div>
             </div>
         </header>

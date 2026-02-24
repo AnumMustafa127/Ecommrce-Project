@@ -9,14 +9,16 @@ import c7 from '../assets/c7.jpg'
 import img9 from '../assets/img9.jpg'
 import img10 from '../assets/img10.jpg'
 import pic3 from '../assets/3.jpg'
+import { Navigate ,useNavigate } from 'react-router-dom'
 
 const Section = () => {
+    const navigate = useNavigate()
   return (
    <section className='bg-[#e8e6e6] '>
     <div className='flex flex-wrap  justify-center gap-3 m-2'>
         {/* card1 */}
         <div className='bg-white p-2 '>
-            <img src={c1} alt="" />
+            <img onClick={()=>{navigate('/Fourth')}} className='cursor-pointer' src={c1} alt="" />
             <h1 className='font-bold'>$10.30</h1>
             <p className='text-gray-500 w-10/12'>T shirt with multiple colors, for men</p>
         </div>
