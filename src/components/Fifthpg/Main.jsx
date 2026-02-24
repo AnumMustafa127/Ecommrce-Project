@@ -7,7 +7,9 @@ import p2 from '../../assets/payment1.png'
 import p3 from '../../assets/payment2.png'
 import p4 from '../../assets/payment3.png'
 import p5 from '../../assets/payment4.png'
+import { useNavigate } from 'react-router-dom'
 const Main = () => {
+  const navigate = useNavigate()
   const payment = [
     { img: p1 },
     { img: p2 },
@@ -49,7 +51,7 @@ const Main = () => {
           </>
         })}
         <div className='flex flex-col sm:flex-row gap-2'>
-          <button className='bg-blue-600 mt-3 text-white p-3 rounded-md'>⬅ Back To Shop</button>
+          <button onClick={()=>{navigate(-1)}} className='bg-blue-600 mt-3 text-white p-3 rounded-md'>⬅ Back To Shop</button>
           <button className='text-blue-600 font-medium border border-gray-600 p-3 mt-3 shadow-md rounded-md'>Remove all</button>
         </div>
       </div>
